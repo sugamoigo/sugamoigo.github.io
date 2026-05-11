@@ -404,10 +404,52 @@ h1, h2, h3 {
 }
 
 /* ---------- Fee ---------- */
+.fee-group {
+  margin-bottom: clamp(32px, 5vw, 56px);
+}
+.fee-group:last-of-type {
+  margin-bottom: 0;
+}
+.fee-group-title {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 14px 18px;
+  margin: 0 0 22px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--c-line);
+}
+.fee-group-label {
+  font-size: 1.18rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: var(--c-ink);
+  position: relative;
+  padding-left: 18px;
+}
+.fee-group-label::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 50%;
+  transform: translateY(-50%);
+  width: 6px; height: 22px;
+  background: var(--c-accent);
+  border-radius: 1px;
+}
+.fee-group-sub {
+  font-size: 0.86rem;
+  color: var(--c-sub);
+  letter-spacing: 0.14em;
+  font-weight: 400;
+}
 .fee-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 18px;
+}
+.fee-grid--two {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  max-width: 720px;
 }
 .fee-card {
   background: #fff;
@@ -442,6 +484,13 @@ h1, h2, h3 {
   font-weight: 500;
   margin-right: 4px;
   color: var(--c-accent);
+}
+.fee-price .per {
+  font-size: 0.42em;
+  font-weight: 500;
+  margin-left: 4px;
+  color: var(--c-sub);
+  letter-spacing: 0.08em;
 }
 .fee-note {
   font-size: 0.86rem;
